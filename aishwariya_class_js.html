@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <h2>Js class inheritnace</h2>
+        <p id="greetings"></p>
+        <p id="details"></p>
+        <script>
+        class student{
+            constructor(name){
+            this.studentname=name;
+            }
+            static hello(){
+                return "Hello";
+            }
+            present(){
+                return "my name is" + this.studentname
+            }                                                                                                                               
+            }
+            class grade extends student{
+            constructor(name, grade) {
+            super(name);
+            this.studentGrade = grade;
+            }
+            show(){
+            return this.present() + ", from" +this.studentGrade;
+            
+            }
+        }
+            let mystudent =new grade("Alisha","4th")
+            document.getElementById("details").innerHTML= mystudent.show();
+            document.getElementById("greetings").innerHTML= student.hello();
+        
+        </script>
+    </body>
+</html>
